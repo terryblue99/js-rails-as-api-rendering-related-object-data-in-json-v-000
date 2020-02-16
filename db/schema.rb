@@ -19,6 +19,13 @@ ActiveRecord::Schema.define(version: 2020_02_16_011926) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "locations", force: :cascade do |t|
+    t.float "latitude"
+    t.float "longitude"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "sightings", force: :cascade do |t|
     t.integer "bird_id"
     t.integer "location_id"
